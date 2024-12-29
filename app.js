@@ -13,6 +13,7 @@ const User = require("./models/user.js");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
+const MongoStore = require("connect-mongo");
 
 const listingRouter = require("./routes/listing.js");
 const userRouter = require("./routes/user.js");
@@ -38,6 +39,14 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
+const store = MongoStore.create({
+  mongoUrl: MONGO_URL,
+  crypto: {
+    secret: process.env.SECRET,
+  },
+  touchAfter: 24 * 3600,
+});
+
 const sessionOptions = {
   secret: process.env.SECRET,
   resave: false,
@@ -47,6 +56,7 @@ const sessionOptions = {
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
   },
+  store,
 };
 
 app.use(session(sessionOptions));
