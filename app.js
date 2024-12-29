@@ -17,7 +17,8 @@ const mongoose = require("mongoose");
 const listingRouter = require("./routes/listing.js");
 const userRouter = require("./routes/user.js");
 
-const MONGO_URL = "mongodb://localhost:27017/gostream";
+const MONGO_URL =
+  process.env.ATLASDB_URL || "mongodb://localhost:27017/gostream";
 
 main()
   .then(() => {
