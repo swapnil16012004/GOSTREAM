@@ -1,0 +1,241 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display:flex;
+  flex-direction: column;
+  min-height:100vh;
+}
+
+.container{
+    flex:1;
+}
+
+/* Navbar */
+
+.navbar{
+    height:5rem;
+}
+.fa-compass{
+    color:#fe424d;
+    font-size:2rem;
+}
+.nav-link{
+    color:white !important;
+    width: fit-content;
+    display: inline-block;
+}
+.auth{
+    background-color:fuchsia !important;
+    color:white !important;
+    border-radius:20px;
+    margin-left:1rem;
+    padding:0.4rem 1rem 0.4rem 1rem !important;
+    transition-duration:1s;
+    transition-timing-function: ease;
+}
+.auth:hover{
+    transform: scale(1.05);
+}
+.new{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height:5rem;
+    padding:1rem 0 1rem 0;
+}
+.new span{
+    background-color:white;
+    padding:0.5rem;
+    border-radius:10rem;
+}
+.new span a{
+    color:black;
+    text-decoration: none;
+}
+
+/* Footer */
+
+.f-info-links a{
+    text-decoration:none;
+    color:white;
+}
+.f-info-links a:hover{
+    text-decoration:underline;
+}
+.f-info-links, .f-info-socials, .f-info-brand{
+    width:100%;
+}
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right:1rem;
+    color:white;
+}
+.f-info-brand{
+    color:white;
+}
+.f-info{
+    text-align: center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    height:8rem;
+    /* border-color:black !important; */
+}
+
+/* slideshow */
+
+.mySlides {
+    display: none;
+    position:relative;
+}
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    max-height: 70vh;
+    margin-bottom:5rem;
+    margin-top:1rem;
+}
+/* The dots/bullets/indicators */
+.dot {
+
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 39%;
+    width: auto;
+    padding: 16px;
+    margin-top:30px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 133px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.show-info{
+    display:inline-block;
+}
+
+.gray{
+    background-color: gray;
+    border-radius:0.4rem;
+    padding:0.05rem;
+}
+
+.banner{
+    width: 83vw;
+    height: 70vh;
+    object-fit: cover;
+    object-position:center;
+    border-radius:10px;
+}
+
+.show-img{
+    position:absolute;
+    bottom:270px;
+    left:35px;
+    background-color: transparent;
+}
+.doSmall{
+    width:350px  !important;
+    height:50px !important;
+}
+
+.info{
+    color: white;
+    position: absolute;
+    bottom: 170px;
+    left: 50px;
+}
+
+.show-category{
+    color: white;
+    position: absolute;
+    bottom: 140px;
+    left: 60px;
+}
+
+.watch{
+    font-weight:500;
+    font-size: larger; 
+    border-radius:0.8rem; 
+    border:none; width:15rem; 
+    padding:1rem; 
+    background-color: white;
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+}
+
+.watch-link{
+    text-decoration: none;
+    color: black;
+}

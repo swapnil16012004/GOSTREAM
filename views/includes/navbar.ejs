@@ -1,0 +1,61 @@
+<style>
+  .explore{
+    font-size: larger;
+  }
+  .search-btn{
+    background-color:fuchsia;
+    color:#fff;
+    font-weight:600;
+    border-radius:25px;
+    padding:0 1rem;
+    transition-duration:1s;
+    transition-timing-function: ease;
+  }
+  .search-btn:hover{
+    background-color:fuchsia;
+    color:#fff;
+    transform: scale(1.05);
+  }
+  .search-btn i{
+    display:inline;
+    margin-right:0.5rem;
+  }
+  .search-inp{
+    border-radius:25px;
+    padding:0.5rem 3rem;
+    font-size:1rem;
+  }
+  nav{
+    background-color:#0f1014 !important;
+  }
+</style>
+
+
+<nav class="navbar navbar-expand-md border-bottom sticky-top" style="border-color:black !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-g" style="color: fuchsia;font-size:x-large;"></i><i class="fa-solid fa-strikethrough" style="color: fuchsia;font-size:x-large;"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link explore" href="/listings">Explore</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search" action="/listings/search" method="get">
+            <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" name="key">
+            <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <% if(!currUser) {%>
+          <a class="nav-link auth" href="/signup"><b>Sign up</b></a>
+          <a class="nav-link auth" href="/login"><b>Log in</b></a>
+          <% } %>
+          <% if(currUser) {%>
+          <a class="nav-link auth" href="/logout"><b>Log out</b></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

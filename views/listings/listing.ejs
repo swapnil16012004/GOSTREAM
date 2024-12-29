@@ -1,0 +1,16 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row justify-content-around">
+<% for(listing of Listings) {%>
+    <div class="col-sm-12 col-md-6 col-lg-3 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/<%=category%>/<%=listing._id%>" class="newCard">
+        <img src="<%= listing.image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= listing.title %></h2>
+    </div> 
+  
+<% } %>
+</div>
+

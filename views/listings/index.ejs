@@ -1,0 +1,283 @@
+<% layout("/layouts/boilerplate") %>
+<% if(currUser && currUser.username == "admin") {%>
+  <%- include("../includes/new.ejs") %>
+<% } %>
+<%- include("../includes/slideshow.ejs") %>
+<div class="row justify-content-around">
+  <form action="listings/<%= marvelListings[0].category %>" method="get">
+    <h1 class="category">MARVEL&nbsp;&nbsp;<button type="submit" style="border: none;color:white;background-color: transparent;"><i class="fa-solid fa-arrow-right" style="cursor: pointer;"></i></button></h1>
+  </form>
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/marvel/<%=marvelListings[0]._id%>" class="newCard">
+        <img src="<%= marvelListings[0].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= marvelListings[0].title %></h2>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/marvel/<%=marvelListings[1]._id%>" class="newCard">
+        <img src="<%= marvelListings[1].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= marvelListings[1].title %></h2>
+    </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/marvel/<%=marvelListings[2]._id%>" class="newCard">
+          <img src="<%= marvelListings[2].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= marvelListings[2].title %></h2>
+      </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/marvel/<%=marvelListings[3]._id%>" class="newCard">
+        <img src="<%= marvelListings[3].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= marvelListings[3].title %></h2>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/marvel/<%=marvelListings[4]._id%>" class="newCard">
+        <img src="<%= marvelListings[4].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= marvelListings[4].title %></h2>
+    </div>
+</div>
+<div class="row justify-content-around">
+  <form action="listings/<%= historyListings[0].category %>" method="get">
+    <h1 class="category">HISTORY&nbsp;&nbsp;<button type="submit" style="border: none;color:white;background-color: transparent;"><i class="fa-solid fa-arrow-right" style="cursor: pointer;"></i></button></h1>
+  </form>
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/history/<%=historyListings[0]._id%>" class="newCard">
+        <img src="<%= historyListings[0].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= historyListings[0].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/history/<%=historyListings[1]._id%>" class="newCard">
+        <img src="<%= historyListings[1].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= historyListings[1].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/history/<%=historyListings[2]._id%>" class="newCard">
+        <img src="<%= historyListings[2].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= historyListings[2].title %></h2>
+    </div>
+
+  
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/history/<%=historyListings[3]._id%>" class="newCard">
+          <img src="<%= historyListings[3].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= historyListings[3].title %></h2>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/history/<%=historyListings[4]._id%>" class="newCard">
+          <img src="<%= historyListings[4].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= historyListings[4].title %></h2>
+      </div>
+</div>
+<div class="row justify-content-around">
+  <form action="listings/<%= popularMovieListings[0].category %>" method="get">
+    <h1 class="category">Popular Movies&nbsp;&nbsp;<button type="submit" style="border: none;color:white;background-color: transparent;"><i class="fa-solid fa-arrow-right" style="cursor: pointer;"></i></button></h1>
+  </form>
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/popularMovie/<%=popularMovieListings[0]._id%>" class="newCard">
+        <img src="<%= popularMovieListings[0].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= popularMovieListings[0].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/popularMovie/<%=popularMovieListings[1]._id%>" class="newCard">
+        <img src="<%= popularMovieListings[1].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= popularMovieListings[1].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/popularMovie/<%=popularMovieListings[2]._id%>" class="newCard">
+        <img src="<%= popularMovieListings[2].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= popularMovieListings[2].title %></h2>
+    </div>
+
+  
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/popularMovie/<%=popularMovieListings[3]._id%>" class="newCard">
+          <img src="<%= popularMovieListings[3].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= popularMovieListings[3].title %></h2>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/popularMovie/<%=popularMovieListings[4]._id%>" class="newCard">
+          <img src="<%= popularMovieListings[4].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= popularMovieListings[4].title %></h2>
+      </div>
+</div>
+
+<div class="row justify-content-around">
+  <form action="listings/<%= comedyListings[0].category %>" method="get">
+    <h1 class="category">Comedy&nbsp;&nbsp;<button type="submit" style="border: none;color:white;background-color: transparent;"><i class="fa-solid fa-arrow-right" style="cursor: pointer;"></i></button></h1>
+  </form>
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/comedy/<%=comedyListings[0]._id%>" class="newCard">
+        <img src="<%= comedyListings[0].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= comedyListings[0].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/comedy/<%=comedyListings[1]._id%>" class="newCard">
+        <img src="<%= comedyListings[1].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= comedyListings[1].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/comedy/<%=comedyListings[2]._id%>" class="newCard">
+        <img src="<%= comedyListings[2].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= comedyListings[2].title %></h2>
+    </div>
+
+  
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/comedy/<%=comedyListings[3]._id%>" class="newCard">
+          <img src="<%= comedyListings[3].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= comedyListings[3].title %></h2>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/comedy/<%=comedyListings[4]._id%>" class="newCard">
+          <img src="<%= comedyListings[4].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= comedyListings[4].title %></h2>
+      </div>
+</div>
+
+<div class="row justify-content-around">
+  <form action="listings/<%= kidListings[0].category %>" method="get">
+    <h1 class="category">Kids&nbsp;&nbsp;<button type="submit" style="border: none;color:white;background-color: transparent;"><i class="fa-solid fa-arrow-right" style="cursor: pointer;"></i></button></h1>
+  </form>
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/kid/<%=kidListings[0]._id%>" class="newCard">
+        <img src="<%= kidListings[0].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= kidListings[0].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/kid/<%=kidListings[1]._id%>" class="newCard">
+        <img src="<%= kidListings[1].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= kidListings[1].title %></h2>
+    </div>
+  
+    <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+      <div class="card">
+        <a href="/listings/kid/<%=kidListings[2]._id%>" class="newCard">
+        <img src="<%= kidListings[2].image %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay"></div>
+        </a>
+      </div>
+      <h2 class="card-title"><%= kidListings[2].title %></h2>
+    </div>
+
+  
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/kid/<%=kidListings[3]._id%>" class="newCard">
+          <img src="<%= kidListings[3].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= kidListings[3].title %></h2>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-2 mb-4 mt-2 card-body">
+        <div class="card">
+          <a href="/listings/kid/<%=kidListings[4]._id%>" class="newCard">
+          <img src="<%= kidListings[4].image %>" class="card-img-top" alt="...">
+          <div class="card-img-overlay"></div>
+          </a>
+        </div>
+        <h2 class="card-title"><%= kidListings[4].title %></h2>
+      </div>
+</div>
+
+

@@ -1,0 +1,36 @@
+<style>
+    .new-color{
+        color: white;
+    }
+</style>
+
+<% layout("/layouts/boilerplate") %>
+    <div class="row mt3 new-color">
+        <div class="col-8 offset-2">
+            <br><br>
+            <h3>Add a new <%= category %> Show</h3>
+            <form method="post" action="/listings/<%= category %>" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="listing[title]" placeholder="add a catchy title" class="form-control" id="title" required>
+                    <div class="invalid-feedback">Please enter the title!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Show Image</label>
+                    <input type="file" name="listing[image]" class="form-control" id="image" required>
+                </div>
+                <div class="mb-3">
+                    <label for="video" class="form-label">Video link</label>
+                    <input type="text" name="listing[video]" class="form-control" id="video" required>
+                    <div class="invalid-feedback">video link should be valid</div>
+                </div>
+                <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                    <input type="text" name="listing[category]" value="<%= category %>" placeholder="enter category" class="form-control" id="category" required readonly>
+                    <div class="invalid-feedback">Please enter the category!</div>
+                </div>
+                <button class="btn btn-dark add-btn mt-3">Add</button>
+                <br><br>
+            </form>
+        </div>      
+    </div>
