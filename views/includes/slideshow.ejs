@@ -16,9 +16,14 @@
       &nbsp;
       <li class="show-info gray">&nbsp; UA 13+ &nbsp;</li>
     </h5>
-    <h5 class="show-category">| <%= marvelListings[11].category %> |</h5>
+    <h5 class="show-category">
+      | <%= marvelListings[11].category || "marvel" %> |
+    </h5>
 
-    <a href="/listings/marvel/<%=marvelListings[11]._id%>" class="watch-link">
+    <a
+      href="/listings/marvel/<%=marvelListings[11]._id || '668297138327cae675f12aa2' %>"
+      class="watch-link"
+    >
       <button class="watch">Watch Now</button>
     </a>
   </div>
