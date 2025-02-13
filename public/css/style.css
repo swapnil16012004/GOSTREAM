@@ -522,3 +522,188 @@ body {
     fill: white;
   }
 }
+
+.dropdown-btn {
+  font-size: 17px !important;
+  font-weight: bolder !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  border: none !important;
+}
+
+.dropdown-box {
+  width: 125px;
+  height: 40px;
+  border-radius: 0.3rem;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer !important;
+  transition: all 450ms ease-in-out !important;
+  border: 1px solid #aaa !important;
+  margin-left: 1rem;
+}
+
+.dropdown-box:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+.dropdown-box:hover {
+  background: linear-gradient(0deg, #a47cf3, #683fea);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2), 0px 0px 180px 0px #9917ff;
+  transform: translateY(-2px);
+  border: none !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: 120% !important;
+  left: -70px !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #a47cf3 !important;
+  color: white !important;
+}
+
+/* interface */
+
+.interface-container {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100% !important;
+}
+
+.info-container {
+  height: 500px;
+  width: 484px;
+  position: absolute;
+  top: 100px;
+  left: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo-container {
+  width: 388px;
+  height: auto;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.description-container {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.year-box {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.descriptionBox {
+  text-align: justify;
+  width: 80%;
+  height: 75px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.year-box .year {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.year-box .rated {
+  height: 16px;
+  width: 70px;
+  background-color: hsla(0, 0%, 100%, 0.08);
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.year-box .seasons {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.category-box {
+  height: 40px;
+  font-size: 25px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.button-box {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 5.5rem !important;
+  gap: 2.5rem;
+}
+
+.button-box .watchBtn {
+  width: 300px;
+  height: 56px;
+  border-radius: 8px;
+  border: none !important;
+  font-size: 20px;
+  font-weight: bolder;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 1px rgb(200, 200, 200);
+  cursor: pointer;
+}
+
+.button-box .watchBtn:hover {
+  transform: scale(1.04);
+}
+
+.button-box .watchlist {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  border: none !important;
+  font-size: 25px;
+  font-weight: 800;
+  color: black;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button-box .watchlist:hover {
+  transform: scale(1.04);
+}

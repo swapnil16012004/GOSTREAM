@@ -1,71 +1,105 @@
 <div class="slideshow-container">
-    <div class="mySlides fade">
+  <div class="mySlides fade">
+    <img
+      class="banner"
+      src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/7033/1607033-i-d6f937c102ac"
+    />
+    <img
+      class="show-img"
+      src="https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/7032/1607032-t-73a2c8df16e9"
+      alt="loki"
+    />
+    <h5 class="info">
+      <li class="show-info">&#x2022; 2023</li>
+      &nbsp;
+      <li class="show-info">&#x2022; 2 seasons</li>
+      &nbsp;
+      <li class="show-info gray">&nbsp; UA 13+ &nbsp;</li>
+    </h5>
+    <h5 class="show-category">| <%= marvelListings[11].category %> |</h5>
 
-        <img class="banner" src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/7033/1607033-i-d6f937c102ac">
-        <img class="show-img" src="https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/7032/1607032-t-73a2c8df16e9" alt="loki">
-        <h5 class="info"><li class="show-info">&#x2022; 2023</li> &nbsp;<li class="show-info">&#x2022; 2 seasons</li> &nbsp;<li class="show-info gray">&nbsp; UA 13+ &nbsp;</li></h5>
-        <h5 class="show-category">| <%= marvelListings[12].category %> |</h5>
+    <a href="/listings/marvel/<%=marvelListings[11]._id%>" class="watch-link">
+      <button class="watch">Watch Now</button>
+    </a>
+  </div>
+  <div class="mySlides fade">
+    <img class="banner" src="<%=  historyListings[2].imgBanner %>" />
+    <img
+      class="show-img"
+      src="<%=  historyListings[2].logo %>"
+      alt="subhedar"
+    />
+    <h5 class="show-category">| <%= historyListings[2].category %> |</h5>
 
-        <a href="/listings/marvel/<%=marvelListings[12]._id%>" class="watch-link">
-            <button class="watch">Watch Now</button>
-        </a>
-    
+    <a href="/listings/history/<%=historyListings[2]._id%>" class="watch-link">
+      <button class="watch">Watch Now</button>
+    </a>
+  </div>
+  <div class="mySlides fade">
+    <img
+      class="banner"
+      src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/3410/1623410-i-5fe8c00b81e1"
+    />
+    <img
+      class="show-img"
+      src="https://img10.hotstar.com/image/upload/f_auto,h_124/sources/r1/cms/prod/3408/1623408-t-9ec4d70dcf2b"
+      alt="sita ramam"
+    />
+    <h5 class="show-category">| <%= popularMovieListings[0].category %> |</h5>
 
-    </div>
-    <div class="mySlides fade">
+    <a
+      href="/listings/popularMovie/<%=popularMovieListings[0]._id%>"
+      class="watch-link"
+    >
+      <button class="watch">Watch Now</button>
+    </a>
+  </div>
+  <div class="mySlides fade">
+    <img
+      class="banner"
+      src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/4773/1544773-i-780799471081"
+    />
+    <img
+      class="show-img doSmall"
+      src="https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/4775/1544775-t-cc9d70aeac92"
+      alt="housefull 4"
+    />
+    <h5 class="show-category">| <%= comedyListings[1].category %> |</h5>
 
-        <img class="banner" src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/8524/1707210878524-i">
-        <img class="show-img" src="https://img10.hotstar.com/image/upload/f_auto,h_124/sources/r1/cms/prod/6843/1707210886843-t" alt="sarsenapati habirrao">
-        <h5 class="show-category">| <%= historyListings[7].category %> |</h5>
+    <a href="/listings/comedy/<%=comedyListings[1]._id%>" class="watch-link">
+      <button class="watch">Watch Now</button>
+    </a>
+  </div>
+  <div class="mySlides fade">
+    <img
+      class="banner"
+      src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/2455/1717523662455-i"
+    />
+    <img
+      class="show-img"
+      src="https://img10.hotstar.com/image/upload/f_auto,h_124/sources/r1/cms/prod/2965/1717524622965-t"
+      alt="legends of hanuman"
+    />
+    <h5 class="info">
+      <li class="show-info">&#x2022; 2024</li>
+      &nbsp;
+      <li class="show-info">&#x2022; 4 seasons</li>
+      &nbsp;
+      <li class="show-info gray">&nbsp; UA 7+ &nbsp;</li>
+    </h5>
+    <h5 class="show-category">| <%= kidListings[0].category %> |</h5>
 
-        <a href="/listings/history/<%=historyListings[7]._id%>" class="watch-link">
-            <button class="watch">Watch Now</button>
-        </a>
-
-    </div>
-    <div class="mySlides fade">
-
-        <img class="banner" src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/3410/1623410-i-5fe8c00b81e1">
-        <img class="show-img" src="https://img10.hotstar.com/image/upload/f_auto,h_124/sources/r1/cms/prod/3408/1623408-t-9ec4d70dcf2b" alt="sita ramam">
-        <h5 class="show-category">| <%= popularMovieListings[0].category %> |</h5>
-
-        <a href="/listings/popularMovie/<%=popularMovieListings[0]._id%>" class="watch-link">
-            <button class="watch">Watch Now</button>
-        </a>
-
-    </div>
-    <div class="mySlides fade">
-        
-        <img class="banner" src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/4773/1544773-i-780799471081">
-        <img class="show-img doSmall" src="https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/4775/1544775-t-cc9d70aeac92" alt="housefull 4">
-        <h5 class="show-category">| <%= comedyListings[1].category %> |</h5>
-
-        <a href="/listings/comedy/<%=comedyListings[1]._id%>" class="watch-link">
-            <button class="watch">Watch Now</button>
-        </a>
-
-    </div>
-    <div class="mySlides fade">
-        
-        <img class="banner" src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/2455/1717523662455-i">
-        <img class="show-img" src="https://img10.hotstar.com/image/upload/f_auto,h_124/sources/r1/cms/prod/2965/1717524622965-t" alt="legends of hanuman">
-        <h5 class="info"><li class="show-info">&#x2022; 2024</li> &nbsp;<li class="show-info">&#x2022; 4 seasons</li> &nbsp;<li class="show-info gray">&nbsp; UA 7+ &nbsp;</li></h5>
-        <h5 class="show-category">| <%= kidListings[0].category %> |</h5>
-
-        <a href="/listings/kid/<%=kidListings[0]._id%>" class="watch-link">
-            <button class="watch">Watch Now</button>
-        </a>
-
-    </div>
-    <div style="text-align:center; margin:-5vh;">
-
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-
-    </div>
-    <a class="prev" onclick="prevSlide()">&#10094;</a>
-    <a class="next" onclick="showSlides()">&#10095;</a>
+    <a href="/listings/kid/<%=kidListings[0]._id%>" class="watch-link">
+      <button class="watch">Watch Now</button>
+    </a>
+  </div>
+  <div style="text-align: center; margin: -5vh">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <a class="prev" onclick="prevSlide()">&#10094;</a>
+  <a class="next" onclick="showSlides()">&#10095;</a>
 </div>

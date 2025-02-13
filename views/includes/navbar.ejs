@@ -108,6 +108,27 @@
         <a class="btn-new pad2" href="/login"><b>Log in</b></a>
         <% } %> <% if(currUser) {%>
         <a class="btn-new pad1" href="/logout"><b>Log out</b></a>
+        <div class="dropdown">
+          <button
+            class="btn dropdown-btn dropdown-box"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <%= currUser.username %>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button class="dropdown-item" type="button">My Account</button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">Subscription</button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">Watchlist</button>
+            </li>
+          </ul>
+        </div>
         <% } %>
       </div>
     </div>
